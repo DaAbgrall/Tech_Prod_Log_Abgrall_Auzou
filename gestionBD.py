@@ -2,7 +2,7 @@ import sqlite3 as lite
 import sys
 
 def connection():
-    connec = lite.connect('test.db')
+    connec = lite.connect('projet.db')
     
 def curseur():
     cur = connec.cursor()

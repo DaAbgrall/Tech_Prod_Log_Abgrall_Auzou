@@ -11,5 +11,6 @@ def deconnection():
     connec.close()
     
 def execution(v):
+    cur = connec.cursor()
     cur.execute(v)
     

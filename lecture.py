@@ -2,6 +2,6 @@ import csv
 
 def recuperation (filepatch):
     with open (filepatch,'rt')as csvfile:
-        instalReader = cvs.reader(cvsfile,delimiter=',',quotechar='"')
+        instalReader = csv.reader(csvfile,delimiter=',',quotechar='"')
         for row in instalReader:
             return (row[1])    

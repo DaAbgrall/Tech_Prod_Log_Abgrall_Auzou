@@ -3,6 +3,8 @@ import sys
 
 def connection():
     connec = lite.connect('test.db')
+    
+def curseur():
     cur = connec.cursor()
 
 def deconnection():

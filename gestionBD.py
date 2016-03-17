@@ -2,10 +2,10 @@ import sqlite3 as lite
 import sys
 
 def connection():
-    connec = lite.connect('projet.db')
+    return sqlite3.connect('projet.db')
     
 def curseur():
-    cur = connec.cursor()
+    return connec.cursor()
 
 def deconnection():
     connec.close()

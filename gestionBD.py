@@ -4,11 +4,12 @@ import sys
 def connection():
     connec = lite.connect('projet.db')
     
-def curseur():
+def curseur(connec):
     cur = connec.cursor()
 
-def deconnection():
+def deconnection(connec):
     connec.close()
+    connec.commit
     
 def execution(v):
     cur = connec.cursor()

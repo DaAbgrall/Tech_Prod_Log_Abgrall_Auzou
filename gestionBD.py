@@ -1,4 +1,4 @@
-import sqlite3 as lite
+import sqlite3
 import sys
 
 def connection():
@@ -9,7 +9,7 @@ def curseur():
     return self.cursor()
 
 
-def deconnection(connec):
+def deconnection():
     connec.close()
     connec.commit
 

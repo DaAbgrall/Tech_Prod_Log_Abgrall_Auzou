@@ -4,10 +4,11 @@ import importers.Line
 from importers.Parser import parseRow
 from importers.Creator import *
 
-def importActivities(filename):
+def importe(filename):
     importedActivities = []
     importedEquipement = []
     importedIntsallations = []
+    i = 0
 
     with open(filename, 'rt') as csvfile:
         activitiesReader = csv.reader(csvfile, delimiter=',', quotechar='"')
@@ -19,7 +20,7 @@ def importActivities(filename):
                         insertActivity(activityLine)
                         importedActivities.append(activityLine.numero)
                         
-                elif(filename=="csv/equipements.csv"):  
+                elif(filename=="csv/equipements.csv"):
                     equipementLine = parseRow(row,filename)
                     if equipementLine.numero not in importedEquipement:
                         insertEquipement(equipementLine)

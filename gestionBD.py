@@ -6,7 +6,7 @@ def connection():
 
 
 def curseur():
-    return connec.cursor()
+    return self.cursor()
 
 
 def deconnection(connec):

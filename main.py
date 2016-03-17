@@ -1,12 +1,11 @@
-import lecture
 import gestionBD
+import importers.Importer 
 import admin
 
 def main ():
     admin.creationBD
-    test=lecture.recuperation('csv/23440003400026_J335_installations_table.csv')
-    testco=gestionBD.connection
-    cur=gestionBD.curseur
-    gestionBD.execution("SELECT SQLITE_VERSION()")
+    importers.Importer.importActivities("csv/activites.csv")
+    importers.Importer.importActivities("csv/equipements.csv")
+    importers.Importer.importActivities("csv/installations.csv")
     print("test")
     testco.deconnection

@@ -1,4 +1,4 @@
-from importers.Line import ActivityLine, EquipementLine, InstallationLine
+from importers.Line import ActivityLine, EquipementLine, InstallationLine, EquipementActivite
 
 def parseRow(row,filename):
     if(filename=="csv/activites.csv"):
@@ -24,4 +24,8 @@ def parseRow(row,filename):
         
     else:
         print("Erreur vos fichiers n'omt pas le bon nom")
-            
+        
+def parseRow2(row):
+    numero_equi = int(row[2].strip())
+    numero_acti = int(row[4].strip())
+    return EquipementActivite(numero_equi,numero_acti)

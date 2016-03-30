@@ -1,0 +1,20 @@
+$(document).ready(function(){
+	function init(){
+		var bouton=document.getElementById('confirmation') ;
+		el.addEventListener("click", affiche, false) ;
+	}
+
+	function affiche() {
+		var chpsCommune=document.getElementById('commune');
+		var chpsActi=document.getElementById('activite');
+		if((chpsCommune.val()!=null)&&(chpsActi.val()!=null)){
+			call(../,);
+		}else if(chpsCommune.val()!=null){
+			call(../);
+		}else if(chpsActi.val()!=null){
+			call(../);
+		}else{
+			window.alert("Veuillez remplir au moins un des champs")
+		}
+	}
+}

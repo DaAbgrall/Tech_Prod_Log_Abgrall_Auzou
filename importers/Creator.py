@@ -1,28 +1,31 @@
 import sqlite3
 
-from importers.Line import ActivityLine
+from Line import ActivityLine
+
+insertQueryA = "INSERT INTO Activite(numero, nom) VALUES (?, ?)"
+insertQueryI = "INSERT INTO Installation(numero, nom, adresse, code_postal, ville, latitude, longitude) VALUES (?, ?, ?, ?, ?, ?, ?)"
+insertQueryE = "INSERT INTO Equipement(numero, nom, numero_installation) VALUES (?, ?, ?)"
+
+
 
 def insertActivity(activity):
     connec = sqlite3.connect('projet.db')
     curs = connec.cursor()
-    insertQuery = "INSERT INTO Activite(numero, nom) VALUES (?, ?)"
-    curs.execute(insertQuery, (activity.numero, activity.nom))
+    curs.execute(insertQueryA, (activity.numero, activity.nom))
     connec.commit()
     connec.close()
 
 def insertInstallation(installation):
     connec = sqlite3.connect('projet.db')
     curs = connec.cursor()
-    insertQuery = "INSERT INTO Installation(numero, nom, adresse, code_postal, ville, latitude, longitude) VALUES (?, ?, ?, ?, ?, ?, ?)"
-    curs.execute(insertQuery, (installation.numero, installation.nom, installation.adresse, installation.code_postal, installation.ville, installation.latitude, installation.longitude))
+    curs.execute(insertQueryI, (installation.numero, installation.nom, installation.adresse, installation.code_postal, installation.ville, installation.latitude, installation.longitude))
     connec.commit()
     connec.close()
 
 def insertEquipement(equipement):
     connec = sqlite3.connect('projet.db')
     curs = connec.cursor()
-    insertQuery = "INSERT INTO Equipement(numero, nom, numero_installation) VALUES (?, ?, ?)"
-    curs.execute(insertQuery, (equipement.numero, equipement.nom, equipement.numero_installation))
+    curs.execute(insertQueryE, (equipement.numero, equipement.nom, equipement.numero_installation))
     connec.commit()
     connec.close()
     

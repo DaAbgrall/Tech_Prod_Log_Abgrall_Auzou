@@ -19,10 +19,16 @@ def main ():
     
     connec = lite.connect('projet.db')
     curs = connec.cursor()
+    insertQuery = "INSERT INTO Equipement_Activite(numero_equipement, numero_activite)VALUES(?,?)"
     for row in curs.execute('SELECT e.numero, a.numero FROM Equipement e, Activite a'):
-        print (row)
-
+        curs.execute(insertQuery,(row[0],row[1]))
+        print(row)
     connec.commit()
     connec.close()
     
-    
+    # connec = lite.connect('projet.db')
+    # curs = connec.cursor()
+    # for row2 in curs.execute('SELECT * FROM Equipement_Activite'):
+    #     print(row2)
+    # connec.commit()
+    # connec.close()

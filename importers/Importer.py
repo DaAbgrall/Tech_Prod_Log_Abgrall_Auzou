@@ -1,8 +1,8 @@
 import csv
 
-import importers.Line 
-from importers.Parser import parseRow
-from importers.Creator import *
+import Line 
+from Parser import parseRow
+from Creator import *
 
 def importe(filename):
     importedActivities = []

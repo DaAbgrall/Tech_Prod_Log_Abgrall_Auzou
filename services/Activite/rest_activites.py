@@ -15,23 +15,20 @@ def allActivites():
         activitesTab.append(Activite(row[0], row[1]).__dict__)
 
     connect.close()
-    
+
     return activitesTab
 
 def activite(activNom):
-    activesTab = []
+    activitesTab = []
 
     connect = connection()
     curseur = connect.cursor()
-    query = "select numero, nom from Activite where nom = (?)"
-    curseur.execute(query, (activNom))
+    curseur.execute("select numero, nom from Activite where nom LIKE ?", ["%"+activNom+"%"])
 
     for  row in curseur:
         activitesTab.append(Activite(row[0], row[1]).__dict__)
 
-    deconnection()
-    for row in activitesTab:
-        print(row[0]+ "  "+row[1])
+    connect.close()
     return activitesTab
 
 '''

@@ -11,7 +11,7 @@
 entrer une commune <input id="commune" type="text" name="commune">
 et ou entrer une activite<input id="activite" type="text" name="activite">
 </br>
-<input id="confirmation" type="button" name="confirmer">
+<input id="confirmation" type="button" value="confirmer">
 </form>
 <div id="test"></div>
 </body>

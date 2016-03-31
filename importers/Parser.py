@@ -1,4 +1,7 @@
-from Line import ActivityLine, EquipementLine, InstallationLine, EquipementActivite
+from importers.Line import ActivityLine, EquipementLine, InstallationLine, EquipementActivite
+"""
+Classe qui récupère les données dans un fichier en fonction de son nom
+"""
 
 def parseRow(row,filename):
     if(filename=="csv/activites.csv"):

@@ -1,3 +1,7 @@
+"""
+Fichier qui sert à créer des classes qui sont utilient pour l'insertion dans la base.
+"""
+
 
 class ActivityLine:
     def __init__(self, numero, nom):

@@ -1,6 +1,6 @@
 import sqlite3
 
-from Line import ActivityLine
+from importers.Line import ActivityLine
 import gestionBD
 
 insertQueryA = "INSERT INTO Activite(numero, nom) VALUES (?, ?)"
@@ -8,7 +8,9 @@ insertQueryI = "INSERT INTO Installation(numero, nom, adresse, code_postal, vill
 insertQueryE = "INSERT INTO Equipement(numero, nom, numero_installation) VALUES (?, ?, ?)"
 insertQueryE_A = "INSERT INTO equipement_activite(numero_equipement, numero_activite) VALUES (?, ?)"
 
-
+"""
+Methode qui servent à insérer les données dans la base
+"""
 
 def insertActivity(activity):
     connec = sqlite3.connect('projet.db')
@@ -25,7 +27,6 @@ def insertInstallation(installation):
 def insertEquipement(equipement):
     connec = sqlite3.connect('projet.db')
     curs = connec.cursor()
-    insertQuery = "INSERT INTO Equipement(numero, nom, numero_installation) VALUES (?, ?, ?)"
     curs.execute(insertQueryE, (equipement.numero, equipement.nom, equipement.numero_installation))
     gestionBD.deconnection
     

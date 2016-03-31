@@ -1,20 +1,22 @@
 $(document).ready(function(){
-	function init(){
 		var bouton=document.getElementById('confirmation') ;
-		el.addEventListener("click", affiche, false) ;
-	}
+		bouton.addEventListener("click", affiche, false) ;
 
 	function affiche() {
 		var chpsCommune=document.getElementById('commune');
 		var chpsActi=document.getElementById('activite');
-		if((chpsCommune.val()!=null)&&(chpsActi.val()!=null)){
-			call(../,);
-		}else if(chpsCommune.val()!=null){
-			call(../);
-		}else if(chpsActi.val()!=null){
-			call(../);
+		var acti = chpsActi.value;
+		var commune =chpsCommune.value;
+		if((commune!=null)&&(acti!=null)){
+		//TODO remplir les destinations de REST
+			//call(../,chpsCommune.val(),chpsActi.val());
+		}else if(commune!=null){
+			//call(../,chpsCommune.val());
+		}else if(acti!=null){
+			 var test = call("../services/Activite/res_activites/activite()",chpsActi.val());
+			 $('body').append("<p>"test"<p>");
 		}else{
-			window.alert("Veuillez remplir au moins un des champs")
+			window.alert("Veuillez remplir au moins un des champs");
 		}
 	}
-}
+});

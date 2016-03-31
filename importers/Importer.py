@@ -1,9 +1,12 @@
 import csv
 
-import Line 
-from Parser import parseRow, parseRow2
-from Creator import *
+import importers.Line 
+from importers.Parser import parseRow, parseRow2
+from importers.Creator import *
 
+"""
+Méthode qui en fonction du nom de fichier qu'il reçoit va récuperer les données dans ce fichier puis initialiser l'insertion
+"""
 
 def importe(filename):
     importedActivities = []

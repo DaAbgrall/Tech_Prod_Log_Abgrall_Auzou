@@ -2,8 +2,9 @@ import gestionBD
 import importers.Importer 
 import admin
 import sqlite3 as lite
-
-
+"""
+Classe qui lance la création de la base de donnée et l'insertion de données
+"""
 def main ():
 
     admin.creationBD()

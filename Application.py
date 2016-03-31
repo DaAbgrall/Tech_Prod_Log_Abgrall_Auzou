@@ -6,8 +6,11 @@ import services.Activite.rest_activites as act
 from services.equipement.Equipement import *
 from services.installation.Installation import *
 
+# activitesTab = act.allActivites()
+# for row in activitesTab:
+#     print(row)
 
-#TODO
-activitesTab = act.allActivites()
+
+activitesTab = act.activite("Football")
 for row in activitesTab:
-    print(row[0])
+    print(row)

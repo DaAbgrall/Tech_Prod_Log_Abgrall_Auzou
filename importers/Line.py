@@ -31,11 +31,11 @@ class EquipementLine:
         return "{} - {}".format(self.numero, self.nom, self.numero_installation)
         
         
-# class EquipemenbtActivite:
-#     def __init__(self, numero_equipement, numero_activite):
-#         self.numero_equipement = numero_equipement
-#         self.numero_activite = numero_activite
-# 
-#     def __repr__(self):
-#         return "{} - {}".format(self.numero_equipement, self.numero_activite)
+class EquipementActivite:
+     def __init__(self, numero_equipement, numero_activite):
+         self.numero_equipement = numero_equipement
+         self.numero_activite = numero_activite
+ 
+     def __repr__(self):
+         return "{} - {}".format(self.numero_equipement, self.numero_activite)
         

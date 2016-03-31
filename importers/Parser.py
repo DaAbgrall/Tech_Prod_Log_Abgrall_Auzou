@@ -1,4 +1,4 @@
-from Line import ActivityLine, EquipementLine, InstallationLine
+from Line import ActivityLine, EquipementLine, InstallationLine, EquipementActivite
 
 def parseRow(row,filename):
     if(filename=="csv/activites.csv"):
@@ -23,5 +23,11 @@ def parseRow(row,filename):
         return  InstallationLine(numero, nom, adresse, code_postal, ville, latitude, longitude)
         
     else:
-        print("Erreur vos fichiers n'ont pas le bon nom")
-            
+
+        print("Erreur vos fichiers n'omt pas le bon nom")
+        
+def parseRow2(row):
+    numero_equi = int(row[2].strip())
+    numero_acti = int(row[4].strip())
+    return EquipementActivite(numero_equi,numero_acti)
+

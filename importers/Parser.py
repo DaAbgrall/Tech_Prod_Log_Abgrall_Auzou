@@ -1,6 +1,6 @@
 from importers.Line import ActivityLine, EquipementLine, InstallationLine, EquipementActivite
 """
-Classe qui récupère les données dans un fichier en fonction de son nom
+Classe qui recupere les donnees dans un fichier en fonction de son nom
 """
 
 def parseRow(row,filename):

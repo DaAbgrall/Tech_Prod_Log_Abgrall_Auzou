@@ -3,7 +3,7 @@ import importers.Importer
 import admin
 import sqlite3 as lite
 """
-Classe qui lance la création de la base de donnée et l'insertion de données
+Classe qui lance la creation de la base de donnee et l'insertion de donnees
 """
 def main ():
 

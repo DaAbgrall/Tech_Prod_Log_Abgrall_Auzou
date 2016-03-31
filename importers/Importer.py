@@ -5,7 +5,7 @@ from importers.Parser import parseRow, parseRow2
 from importers.Creator import *
 
 """
-Méthode qui en fonction du nom de fichier qu'il reçoit va récuperer les données dans ce fichier puis initialiser l'insertion
+Methode qui en fonction du nom de fichier qu'il reçoit va recuperer les donnees dans ce fichier puis initialiser l'insertion
 """
 
 def importe(filename):

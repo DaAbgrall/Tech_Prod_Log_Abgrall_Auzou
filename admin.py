@@ -2,7 +2,7 @@ import sqlite3 as lite
 import sys
 import gestionBD
 """
-Classe qui créé la base de donné
+Classe qui cree la base de donne
 """
 def creationBD():
     connec = lite.connect('projet.db')

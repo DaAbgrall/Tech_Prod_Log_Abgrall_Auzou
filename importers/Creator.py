@@ -9,7 +9,7 @@ insertQueryE = "INSERT INTO Equipement(numero, nom, numero_installation) VALUES 
 insertQueryE_A = "INSERT INTO equipement_activite(numero_equipement, numero_activite) VALUES (?, ?)"
 
 """
-Methode qui servent à insérer les données dans la base
+Methode qui servent a inserer les donnees dans la base
 """
 
 def insertActivity(activity):

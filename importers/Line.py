@@ -1,5 +1,5 @@
 """
-Fichier qui sert à créer des classes qui sont utilient pour l'insertion dans la base.
+Fichier qui sert à creer des classes qui sont utilient pour l'insertion dans la base.
 """
 
 
